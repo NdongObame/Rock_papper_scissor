@@ -9,7 +9,7 @@ Player_score = 0
 replay = "y"
 print("you'll face John in this game of Rock paper scissor")
 while replay == "y":
-    Computer_choice = random.randrange(1, 3)
+    Computer_choice = random.randrange(1, 4)
     John = Game_option[Computer_choice]
     Player_choice = input("enter \nR = rock \nP = paper \nS = scissors\n you play :").lower()
 
@@ -44,3 +44,5 @@ while replay == "y":
         print("john played " + John + "\nIt's a tied")
     print("john: " + str(John_score) + ". player:" + str(Player_score))
     replay = input("do you want to play again ?\ny or n :")
+    while replay.lower() != "y" or "n":
+        replay = input("input error: ?\ny or n :")
